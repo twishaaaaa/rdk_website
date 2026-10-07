@@ -129,7 +129,6 @@ function build(){
   return `Hello RDK, I am ${n}. I am looking for: ${f.get('type')}.${msg?'\n'+msg:''}\nPhone: ${p}`;
 }
 form.addEventListener('submit',e=>{e.preventDefault();const t=build();if(!t)return;note.textContent='Opening WhatsApp…';open('https://wa.me/919016033357?text='+encodeURIComponent(t),'_blank','noopener')});
-$('#mailBtn').addEventListener('click',()=>{const t=build();if(!t)return;note.textContent='Opening your email app…';location.href='mailto:rajukalathiya14@gmail.com?subject='+encodeURIComponent('Project enquiry from website')+'&body='+encodeURIComponent(t)});
 
 /*3D*/
 const build_=$('#home'), stage=$('#stage'), canvas=$('#scene');
