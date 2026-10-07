@@ -391,7 +391,7 @@ if(reduce){
     requestAnimationFrame(loop);
     if(!visible||document.hidden)return;
     const dt=Math.min(.05,(now-lastT)/1000||.016);lastT=now;
-    const tp=targetProgress();cur+=(tp-cur)*(1-Math.exp(-dt*7));if(Math.abs(tp-cur)<.0004)cur=tp;
+    const tp=targetProgress();cur+=(tp-cur)*(1-Math.exp(-dt*4));if(Math.abs(tp-cur)<.0004)cur=tp;
     upd(cur,now/1000);ui(cur);renderer.render(scene,camera);
   })(performance.now());
 }
