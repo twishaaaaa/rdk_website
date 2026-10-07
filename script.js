@@ -45,7 +45,7 @@ $$('.filters button').forEach(b=>b.addEventListener('click',()=>{
 const gal=$('#gal'), galSticky=$('#galSticky'), galTrack=$('#galTrack'), galBar=$('#galBar');
 let galDist=0;
 function layoutGallery(){
-  if(innerWidth<=820){gal.classList.add('native');gal.style.height='';galTrack.style.transform='';return}
+  if(false){gal.classList.add('native');gal.style.height='';galTrack.style.transform='';return}
   gal.classList.remove('native');
   const pad=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--pad'))||0;
   galDist=Math.max(0,galTrack.scrollWidth-innerWidth);
